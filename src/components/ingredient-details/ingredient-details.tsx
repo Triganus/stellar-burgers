@@ -14,5 +14,9 @@ export const IngredientDetails: FC = () => {
     return <Preloader />;
   }
 
-  return <IngredientDetailsUI ingredientData={ingredientData} />;
+  return (
+    <div style={{ padding: '120px 0', textAlign: 'center' }}>
+      <IngredientDetailsUI ingredientData={ingredientData} />
+    </div>
+  );
 };
