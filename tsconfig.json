@@ -23,6 +23,7 @@
       "@ui": ["src/components/ui"],
       "@ui-pages": ["src/components/ui/pages"],
       "@utils-types": ["src/utils/types"],
+      "@utils": ["src/utils"],
       "@api": ["src/utils/burger-api.ts"],
       "@slices": ["src/services/slices"],
       "@selectors": ["src/services/selectors"]
