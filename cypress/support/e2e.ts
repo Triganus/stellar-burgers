@@ -16,6 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import './commands';
 
+// Import fetch mock for API interception
+import './fetch-mock';
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
