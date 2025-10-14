@@ -2,7 +2,8 @@ import feedReducer, {
   fetchFeeds,
   fetchOrders,
   fetchOrderByNumber,
-  clearCurrentOrder
+  clearCurrentOrder,
+  initialState
 } from '../feedSlice';
 import { TOrder } from '../../../utils/types';
 
@@ -23,15 +24,6 @@ const mockFeedsResponse = {
 };
 
 describe('Feed Slice', () => {
-  const initialState = {
-    orders: [],
-    total: 0,
-    totalToday: 0,
-    userOrders: [],
-    currentOrder: null,
-    loading: false,
-    error: null
-  };
 
   it('should return initial state', () => {
     expect(feedReducer(undefined, { type: 'unknown' })).toEqual(initialState);

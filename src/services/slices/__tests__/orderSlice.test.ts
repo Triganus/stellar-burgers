@@ -1,4 +1,4 @@
-import orderReducer, { createOrder, clearOrder } from '../orderSlice';
+import orderReducer, { createOrder, clearOrder, initialState } from '../orderSlice';
 import { TOrder } from '../../../utils/types';
 
 const mockOrder: TOrder = {
@@ -17,11 +17,6 @@ const mockOrderResponse = {
 };
 
 describe('Order Slice', () => {
-  const initialState = {
-    orderRequest: false,
-    orderModalData: null,
-    error: null
-  };
 
   it('should return initial state', () => {
     expect(orderReducer(undefined, { type: 'unknown' })).toEqual(initialState);

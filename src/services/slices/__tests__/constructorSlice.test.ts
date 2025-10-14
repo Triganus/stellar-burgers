@@ -2,7 +2,8 @@ import constructorReducer, {
   addIngredient,
   removeIngredient,
   moveIngredient,
-  clearConstructor
+  clearConstructor,
+  initialState
 } from '../constructorSlice';
 import { TIngredient } from '../../../utils/types';
 
@@ -35,10 +36,6 @@ const mockBun: TIngredient = {
 };
 
 describe('Constructor Slice', () => {
-  const initialState = {
-    bun: null,
-    ingredients: []
-  };
 
   it('should return initial state', () => {
     expect(constructorReducer(undefined, { type: 'unknown' })).toEqual(
