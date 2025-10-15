@@ -14,6 +14,11 @@
   margin: 0;
 }
 
+.orderNumber {
+  margin: 0;
+  text-align: left;
+}
+
 .img_wrap {
   width: 64px;
   height: 64px;
