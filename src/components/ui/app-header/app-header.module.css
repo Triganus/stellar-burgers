@@ -49,25 +49,38 @@
   padding: 8px 0;
 }
 
+/* Планшеты */
+@media (max-width: 1024px) {
+  .menu {
+    padding: 0 20px;
+  }
+
+  .link {
+    padding: 10px 14px;
+  }
+}
+
 /* Мобильные оптимизации */
 @media (max-width: 768px) {
   .menu {
-    padding: 0 12px;
-    min-height: 48px;
+    padding: 0 16px;
+    min-height: 52px;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 6px;
   }
 
   .menu_part_left {
     flex-basis: auto;
     flex: 1;
     min-width: 0;
+    gap: 4px;
   }
 
   .link {
-    padding: 8px 10px;
-    font-size: 14px;
-    min-height: 40px;
+    padding: 10px 12px;
+    font-size: 15px;
+    min-height: 44px;
+    white-space: nowrap;
   }
 
   .link_position_last {
@@ -81,16 +94,47 @@
     width: 100%;
     justify-content: center;
     margin: 0;
-    padding: 4px 0;
+    padding: 8px 0;
   }
 
   .logo img {
-    max-width: 120px;
+    max-width: 130px;
     height: auto;
+  }
+
+  .logo svg {
+    height: 36px;
   }
 }
 
 @media (max-width: 480px) {
+  .menu {
+    padding: 0 12px;
+    min-height: 48px;
+    gap: 4px;
+  }
+
+  .link {
+    padding: 8px 10px;
+    font-size: 14px;
+    min-height: 40px;
+  }
+
+  .logo {
+    padding: 6px 0;
+  }
+
+  .logo img {
+    max-width: 110px;
+  }
+
+  .logo svg {
+    height: 32px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
   .menu {
     padding: 0 8px;
     min-height: 44px;
@@ -104,5 +148,9 @@
 
   .logo img {
     max-width: 100px;
+  }
+
+  .logo svg {
+    height: 28px;
   }
 }

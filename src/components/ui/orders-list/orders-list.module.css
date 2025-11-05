@@ -2,4 +2,49 @@
   overflow-y: scroll;
   width: 100%;
   height: 100%;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 8px;
+}
+
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: #8585ad;
+  border-radius: 4px;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .content {
+    padding: 0 12px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 8px;
+    height: auto;
+    max-height: none;
+  }
+
+  .content::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 0 4px;
+  }
+
+  .content::-webkit-scrollbar {
+    width: 4px;
+  }
 }

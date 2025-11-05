@@ -22,31 +22,65 @@
   gap: 20px;
 }
 
+/* Планшеты */
+@media (max-width: 1024px) {
+  .containerMain {
+    padding: 0 20px;
+  }
+
+  .main {
+    gap: 32px;
+  }
+}
+
 /* Мобильные оптимизации */
 @media (max-width: 768px) {
   .containerMain {
-    padding: 0 12px;
+    padding: 0 16px;
   }
 
   .main {
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     height: auto;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 220px);
   }
 
   .title {
     padding: 0 4px;
+    font-size: 32px !important;
   }
 }
 
 @media (max-width: 480px) {
   .containerMain {
+    padding: 0 12px;
+  }
+
+  .main {
+    gap: 20px;
+    min-height: calc(100vh - 200px);
+  }
+
+  .title {
+    font-size: 28px !important;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+  .containerMain {
     padding: 0 8px;
   }
 
   .main {
-    gap: 12px;
+    gap: 16px;
+    min-height: calc(100vh - 180px);
+  }
+
+  .title {
+    font-size: 24px !important;
   }
 }

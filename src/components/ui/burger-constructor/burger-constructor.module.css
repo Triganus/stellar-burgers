@@ -51,35 +51,57 @@
   margin-left: 44px;
 }
 
+/* Планшеты */
+@media (max-width: 1024px) {
+  .burger_constructor {
+    max-width: 100%;
+  }
+
+  .elements {
+    max-height: 480px;
+  }
+}
+
 /* Мобильные оптимизации */
 @media (max-width: 768px) {
   .burger_constructor {
     width: 100%;
-    padding-bottom: 16px;
+    padding-bottom: 20px;
   }
 
   .elements {
-    max-height: 400px;
+    max-height: 420px;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    padding-right: 8px;
+  }
+
+  .elements::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .elements::-webkit-scrollbar-thumb {
+    background-color: #8585ad;
+    border-radius: 3px;
   }
 
   .text {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   .noBuns {
     margin-left: 0;
-    padding: 12px 16px;
-    min-height: 60px;
-    font-size: 14px;
-    line-height: 20px;
+    padding: 14px 20px;
+    min-height: 70px;
+    font-size: 15px;
+    line-height: 22px;
   }
 
   .total {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
     justify-content: center;
+    padding: 12px 0;
   }
 
   .cost {
@@ -89,7 +111,42 @@
 
 @media (max-width: 480px) {
   .burger_constructor {
+    padding-bottom: 16px;
+  }
+
+  .elements {
+    max-height: 360px;
+    padding-right: 4px;
+  }
+
+  .elements::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .text {
+    font-size: 32px;
+  }
+
+  .noBuns {
+    padding: 12px 16px;
+    min-height: 60px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .total {
+    gap: 12px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+  .burger_constructor {
     padding-bottom: 12px;
+  }
+
+  .elements {
+    max-height: 320px;
   }
 
   .text {

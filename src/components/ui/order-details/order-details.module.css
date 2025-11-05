@@ -1,5 +1,7 @@
 .img {
   margin: 61px 0;
+  max-width: 100%;
+  height: auto;
 }
 
 .title {
@@ -11,4 +13,36 @@
 
 .text {
   color: #8585ad;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .img {
+    margin: 48px 0;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .img {
+    margin: 40px 0;
+  }
+
+  .title {
+    font-size: 96px;
+  }
+}
+
+@media (max-width: 480px) {
+  .img {
+    margin: 32px 0;
+  }
+
+  .title {
+    font-size: 72px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
 }

@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 4px 0;
+  gap: 8px;
 }
 
 .element:last-child {
@@ -13,4 +15,29 @@
   flex-direction: column;
   width: 100%;
   max-width: 536px;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .element_fullwidth {
+    max-width: 100%;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .element {
+    gap: 6px;
+  }
+
+  .element_fullwidth {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .element {
+    gap: 4px;
+    padding: 2px 0;
+  }
 }

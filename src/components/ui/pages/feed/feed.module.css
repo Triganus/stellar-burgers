@@ -43,20 +43,36 @@
   -webkit-overflow-scrolling: touch;
 }
 
+/* Планшеты */
+@media (max-width: 1024px) {
+  .containerMain {
+    padding: 0 20px;
+  }
+
+  .main {
+    gap: 32px;
+  }
+
+  .columnOrders,
+  .columnInfo {
+    max-width: 100%;
+  }
+}
+
 /* Мобильные оптимизации */
 @media (max-width: 768px) {
   .containerMain {
-    padding: 0 12px;
+    padding: 0 16px;
   }
 
   .titleBox {
     padding: 0 4px;
-    gap: 8px;
+    gap: 10px;
   }
 
   .main {
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
     height: auto;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -70,21 +86,54 @@
   .columnInfo {
     width: 100%;
     order: 2;
-    max-height: 400px;
+    max-height: 420px;
+    overflow-y: auto;
+  }
+
+  .columnInfo::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .columnInfo::-webkit-scrollbar-thumb {
+    background-color: #8585ad;
+    border-radius: 3px;
   }
 }
 
 @media (max-width: 480px) {
   .containerMain {
+    padding: 0 12px;
+  }
+
+  .titleBox {
+    gap: 8px;
+  }
+
+  .main {
+    gap: 20px;
+  }
+
+  .columnInfo {
+    max-height: 350px;
+  }
+
+  .columnInfo::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+  .containerMain {
     padding: 0 8px;
   }
 
   .titleBox {
-    gap: 4px;
+    gap: 6px;
   }
 
   .main {
-    gap: 12px;
+    gap: 16px;
   }
 
   .columnInfo {

@@ -5,6 +5,8 @@
   align-items: center;
   text-align: center;
   width: 520px;
+  max-width: 100%;
+  padding: 0 20px;
 }
 
 .nutritional_values {
@@ -15,10 +17,57 @@
   padding: 0;
   margin: 0;
   color: #8585ad;
+  gap: 12px;
 }
 
 .nutritional_value {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .content {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .nutritional_values {
+    gap: 16px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 20px;
+  }
+
+  .nutritional_values {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px 12px;
+  }
+
+  .nutritional_value {
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 0 16px;
+  }
+
+  .nutritional_values {
+    gap: 16px 8px;
+  }
+
+  .nutritional_value {
+    min-width: 60px;
+    font-size: 14px;
+  }
 }

@@ -52,14 +52,45 @@
   align-items: center;
 }
 
+/* Планшеты */
+@media (max-width: 1024px) {
+  .modal {
+    padding: 36px 36px 48px;
+    border-radius: 32px;
+    max-width: 92vw;
+    max-height: 92vh;
+  }
+}
+
 /* Мобильные оптимизации */
 @media (max-width: 768px) {
   .modal {
-    padding: 24px 24px 40px;
+    padding: 28px 24px 40px;
+    border-radius: 24px;
+    max-width: 94vw;
+    max-height: 94vh;
+    width: calc(100vw - 40px);
+  }
+
+  .header {
+    min-height: 52px;
+  }
+
+  .button {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 24px 20px 36px;
     border-radius: 20px;
-    max-width: 95vw;
+    width: calc(100vw - 24px);
     max-height: 95vh;
-    width: calc(100vw - 32px);
   }
 
   .header {
@@ -75,16 +106,17 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
   .modal {
     padding: 20px 16px 32px;
     border-radius: 16px;
     width: calc(100vw - 16px);
-    max-height: 90vh;
+    max-height: 96vh;
   }
 
   .header {
-    min-height: 40px;
+    min-height: 44px;
   }
 
   .button {

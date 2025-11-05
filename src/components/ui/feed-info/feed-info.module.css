@@ -2,10 +2,15 @@
   display: flex;
   justify-content: left;
   align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
 }
+
 .column {
   display: inline;
   min-width: 50%;
+  flex: 1;
+  min-width: 250px;
 }
 
 .list {
@@ -17,18 +22,90 @@
   flex-wrap: wrap;
   max-height: 180px;
   overflow: hidden;
+  gap: 8px;
 }
 
 .title {
-  margin: 0;
+  margin: 0 0 16px 0;
   text-align: left;
 }
 
 .list_item {
   text-align: left;
   min-width: 50%;
+  padding: 4px 0;
 }
 
 .content {
   text-align: left;
+  padding: 20px;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .columns {
+    gap: 20px;
+  }
+
+  .column {
+    min-width: 200px;
+  }
+
+  .list {
+    max-height: 160px;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .column {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .list {
+    max-height: none;
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  .list_item {
+    min-width: 100%;
+  }
+
+  .content {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .columns {
+    gap: 20px;
+  }
+
+  .title {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+  }
+
+  .content {
+    padding: 12px;
+  }
+
+  .list {
+    gap: 4px;
+  }
+
+  .list_item {
+    font-size: 14px;
+  }
 }

@@ -1,7 +1,43 @@
 .menu {
   width: 320px;
+  flex-shrink: 0;
 }
 
 .form {
   max-width: 480px;
+  width: 100%;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .menu {
+    width: 280px;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .menu {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 24px;
+  }
+
+  .form {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    max-width: 100%;
+  }
+
+  .form {
+    padding: 0 16px;
+  }
 }

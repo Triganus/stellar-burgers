@@ -29,25 +29,64 @@
   text-align: center;
 }
 
+/* Планшеты */
+@media (max-width: 1024px) {
+  .app {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .detailPageWrap {
+    margin: 100px auto;
+    padding: 0 24px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
 /* Мобильные оптимизации */
 @media (max-width: 768px) {
   .app {
-    height: 100dvh; /* Динамическая высота viewport для мобильных */
+    height: auto;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
   }
 
   .detailPageWrap {
     margin: 80px auto;
-    padding: 0 16px;
+    padding: 0 20px;
   }
 
   ::-webkit-scrollbar {
     width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
 
 @media (max-width: 480px) {
   .detailPageWrap {
     margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+  .detailPageWrap {
+    margin: 50px auto;
     padding: 0 12px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
   }
 }
