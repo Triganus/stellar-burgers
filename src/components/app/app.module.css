@@ -1,9 +1,11 @@
 .app {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   height: 100vh;
   background-color: #131316;
   color: #f2f2f3;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -25,4 +27,27 @@
 
 .detailHeader {
   text-align: center;
+}
+
+/* Мобильные оптимизации */
+@media (max-width: 768px) {
+  .app {
+    height: 100dvh; /* Динамическая высота viewport для мобильных */
+  }
+
+  .detailPageWrap {
+    margin: 80px auto;
+    padding: 0 16px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detailPageWrap {
+    margin: 60px auto;
+    padding: 0 12px;
+  }
 }

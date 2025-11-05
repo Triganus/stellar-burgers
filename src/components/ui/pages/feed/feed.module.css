@@ -5,6 +5,7 @@
   max-width: 1240px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 16px;
 }
 
 .titleBox {
@@ -13,22 +14,80 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .main {
   display: flex;
   justify-content: space-between;
   height: 100%;
-  width: 1240px;
+  width: 100%;
+  max-width: 1240px;
   overflow: hidden;
+  gap: 20px;
 }
 
 .columnOrders {
   width: 608px;
+  max-width: 100%;
+  flex: 1;
 }
 
 .columnInfo {
   overflow-y: auto;
   overflow-x: hidden;
   width: 580px;
+  max-width: 100%;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Мобильные оптимизации */
+@media (max-width: 768px) {
+  .containerMain {
+    padding: 0 12px;
+  }
+
+  .titleBox {
+    padding: 0 4px;
+    gap: 8px;
+  }
+
+  .main {
+    flex-direction: column;
+    gap: 16px;
+    height: auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .columnOrders {
+    width: 100%;
+    order: 1;
+  }
+
+  .columnInfo {
+    width: 100%;
+    order: 2;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerMain {
+    padding: 0 8px;
+  }
+
+  .titleBox {
+    gap: 4px;
+  }
+
+  .main {
+    gap: 12px;
+  }
+
+  .columnInfo {
+    max-height: 300px;
+  }
 }

@@ -4,15 +4,18 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 .wrapCenter {
   margin: auto;
   width: 480px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .form {
@@ -40,9 +43,56 @@
 .link {
   color: #4c4cff;
   text-decoration: none;
+  min-height: 44px; /* Touch-friendly размер */
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
 }
 
 .error {
   color: #ff0000;
   text-align: center;
+}
+
+/* Мобильные оптимизации */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .wrapCenter {
+    width: 100%;
+    padding: 16px;
+    margin: 40px auto;
+  }
+
+  .form div {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 8px;
+  }
+
+  .wrapCenter {
+    padding: 12px;
+    margin: 20px auto;
+  }
+
+  .title {
+    font-size: 20px !important;
+    line-height: 26px !important;
+  }
+
+  .link {
+    padding: 6px;
+    font-size: 14px;
+  }
 }

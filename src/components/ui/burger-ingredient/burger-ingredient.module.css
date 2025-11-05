@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 44px; /* Touch-friendly размер */
 }
 
 .article {
@@ -9,22 +10,67 @@
   display: flex;
   flex-direction: column;
   width: 260px;
+  max-width: 100%;
   cursor: pointer;
   text-decoration: none;
   color: #ffff;
+  touch-action: manipulation;
+  transition: transform 0.2s ease;
+}
+
+.article:active {
+  transform: scale(0.98);
 }
 
 .cost {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
 }
 
 .text {
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .addButton {
   width: 260px;
+  max-width: 100%;
   justify-content: center;
+  min-height: 44px; /* Touch-friendly размер */
+}
+
+/* Мобильные оптимизации */
+@media (max-width: 768px) {
+  .article {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .addButton {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .article {
+    max-width: 100%;
+  }
+
+  .addButton {
+    max-width: 100%;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .cost {
+    font-size: 20px;
+  }
 }

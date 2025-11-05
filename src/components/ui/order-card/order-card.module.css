@@ -11,7 +11,15 @@
   background-color: #1c1c21;
   border-radius: 40px;
   min-width: 576px;
+  max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
+  touch-action: manipulation;
+  transition: transform 0.2s ease;
+}
+
+.order:active {
+  transform: scale(0.98);
 }
 
 .order_info {
@@ -63,4 +71,62 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Мобильные оптимизации */
+@media (max-width: 768px) {
+  .order {
+    min-width: 100%;
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .order_info {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .order_content {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .img_wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .img {
+    width: 96px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .order {
+    border-radius: 16px;
+    padding: 12px;
+  }
+
+  .order_name {
+    font-size: 14px;
+  }
+
+  .img_wrap {
+    width: 44px;
+    height: 44px;
+  }
+
+  .img {
+    width: 80px;
+    height: 40px;
+  }
+
+  .img_wrap:nth-child(n + 2) {
+    right: 20px;
+  }
+
+  .img {
+    right: 20px;
+  }
 }

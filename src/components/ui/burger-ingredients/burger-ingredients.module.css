@@ -2,6 +2,7 @@
   font-family: 'Jet Brains Mono';
   color: #f2f2f3;
   max-width: 600px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -13,10 +14,16 @@ p {
 
 .tab {
   width: 120px;
+  min-height: 44px; /* Touch-friendly размер */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
-  overflow-y: scroll;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100vh - 300px);
 }
 
 .menu {
@@ -25,6 +32,7 @@ p {
   margin: 0;
   padding: 0;
   text-align: center;
+  gap: 8px;
 }
 
 .categories {
@@ -32,4 +40,51 @@ p {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+}
+
+/* Мобильные оптимизации */
+@media (max-width: 768px) {
+  .burger_ingredients {
+    max-width: 100%;
+  }
+
+  .tab {
+    width: auto;
+    min-width: 80px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  .menu {
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+
+  .content {
+    max-height: calc(100vh - 250px);
+  }
+
+  .categories {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab {
+    min-width: 70px;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  .categories {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .content {
+    max-height: calc(100vh - 220px);
+  }
 }
