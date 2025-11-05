@@ -24,7 +24,6 @@ const mockFeedsResponse = {
 };
 
 describe('Feed Slice', () => {
-
   it('should return initial state', () => {
     expect(feedReducer(undefined, { type: 'unknown' })).toEqual(initialState);
   });

@@ -36,7 +36,6 @@ const mockBun: TIngredient = {
 };
 
 describe('Constructor Slice', () => {
-
   it('should return initial state', () => {
     expect(constructorReducer(undefined, { type: 'unknown' })).toEqual(
       initialState

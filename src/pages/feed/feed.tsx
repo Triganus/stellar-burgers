@@ -22,7 +22,7 @@ export const Feed: FC = () => {
     dispatch(fetchFeeds());
   };
 
-  if (loading || !orders.length) {
+  if (loading) {
     return <Preloader />;
   }
 

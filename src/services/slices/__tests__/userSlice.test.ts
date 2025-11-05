@@ -20,7 +20,6 @@ const mockAuthResponse = {
 };
 
 describe('User Slice', () => {
-
   it('should return initial state', () => {
     expect(userReducer(undefined, { type: 'unknown' })).toEqual(initialState);
   });

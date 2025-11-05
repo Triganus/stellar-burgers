@@ -3,9 +3,14 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
-module.exports = {
-  entry: path.resolve(__dirname, './src/index.tsx'),
-  module: {
+module.exports = (env, argv) => {
+  const isProduction = argv.mode === 'production';
+
+  return {
+    entry: path.resolve(__dirname, './src/index.tsx'),
+    mode: isProduction ? 'production' : 'development',
+    devtool: isProduction ? 'source-map' : 'eval-source-map',
+    module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
@@ -84,12 +89,29 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    filename: isProduction ? '[name].[contenthash].js' : 'bundle.js',
+    clean: true,
+    publicPath: '/'
   },
+  optimization: isProduction
+    ? {
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all'
+            }
+          }
+        }
+      }
+    : {},
   devServer: {
     static: path.join(__dirname, './dist'),
     compress: true,
     historyApiFallback: true,
     port: 4000
   }
+  };
 };

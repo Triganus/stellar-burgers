@@ -1,4 +1,7 @@
-import ingredientsReducer, { fetchIngredients, initialState } from '../ingredientsSlice';
+import ingredientsReducer, {
+  fetchIngredients,
+  initialState
+} from '../ingredientsSlice';
 import { TIngredient } from '../../../utils/types';
 
 const mockIngredients: TIngredient[] = [
@@ -31,7 +34,6 @@ const mockIngredients: TIngredient[] = [
 ];
 
 describe('Ingredients Slice', () => {
-
   it('should return initial state', () => {
     expect(ingredientsReducer(undefined, { type: 'unknown' })).toEqual(
       initialState
