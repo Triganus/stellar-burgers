@@ -78,7 +78,10 @@
 /* Мобильные оптимизации */
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px;
+    padding: 0 16px;
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
   }
 
   .wrapCenter {
@@ -106,7 +109,8 @@
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 16px;
+    padding: 0 12px;
+    flex-direction: column;
   }
 
   .wrapCenter {

@@ -23,21 +23,27 @@
 @media (max-width: 768px) {
   .menu {
     width: 100%;
-    max-width: 320px;
-    margin: 0 auto 24px;
+    max-width: 100%;
+    margin: 0 0 24px 0;
+    flex-shrink: 0;
   }
 
   .form {
-    padding: 0 20px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .menu {
+    width: 100%;
     max-width: 100%;
+    margin: 0 0 20px 0;
   }
 
   .form {
-    padding: 0 16px;
+    padding: 0;
+    width: 100%;
   }
 }

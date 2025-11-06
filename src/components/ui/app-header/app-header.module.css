@@ -63,87 +63,83 @@
 /* Мобильные оптимизации */
 @media (max-width: 768px) {
   .menu {
-    padding: 0 16px;
+    padding: 0 12px;
     min-height: 52px;
-    flex-wrap: wrap;
-    gap: 6px;
+    flex-wrap: nowrap;
+    gap: 4px;
+    justify-content: space-between;
   }
 
   .menu_part_left {
     flex-basis: auto;
-    flex: 1;
+    flex: 0 0 auto;
     min-width: 0;
     gap: 4px;
   }
 
   .link {
-    padding: 10px 12px;
-    font-size: 15px;
+    padding: 8px;
+    font-size: 0;
     min-height: 44px;
     white-space: nowrap;
+    flex: 0 0 auto;
+  }
+
+  .link p {
+    display: none;
   }
 
   .link_position_last {
     flex-basis: auto;
-    flex: 1;
+    flex: 0 0 auto;
     min-width: 0;
   }
 
   .logo {
-    order: -1;
-    width: 100%;
+    order: 0;
+    flex: 1;
     justify-content: center;
     margin: 0;
-    padding: 8px 0;
+    padding: 8px 4px;
+    min-width: 0;
   }
 
   .logo img {
-    max-width: 130px;
+    max-width: 120px;
     height: auto;
   }
 
   .logo svg {
-    height: 36px;
+    height: 32px;
+    width: auto;
   }
 }
 
 @media (max-width: 480px) {
   .menu {
-    padding: 0 12px;
+    padding: 0 8px;
     min-height: 48px;
-    gap: 4px;
+    gap: 2px;
+  }
+
+  .menu_part_left {
+    gap: 2px;
   }
 
   .link {
-    padding: 8px 10px;
-    font-size: 14px;
-    min-height: 40px;
+    padding: 8px;
+    font-size: 0;
+    min-height: 44px;
+    flex: 0 0 auto;
+  }
+
+  .link p {
+    display: none;
   }
 
   .logo {
-    padding: 6px 0;
-  }
-
-  .logo img {
-    max-width: 110px;
-  }
-
-  .logo svg {
-    height: 32px;
-  }
-}
-
-/* Очень маленькие экраны */
-@media (max-width: 360px) {
-  .menu {
-    padding: 0 8px;
-    min-height: 44px;
-  }
-
-  .link {
-    padding: 6px 8px;
-    font-size: 13px;
-    min-height: 36px;
+    padding: 6px 2px;
+    flex: 1;
   }
 
   .logo img {
@@ -152,5 +148,27 @@
 
   .logo svg {
     height: 28px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+  .menu {
+    padding: 0 6px;
+    min-height: 44px;
+    gap: 2px;
+  }
+
+  .link {
+    padding: 6px;
+    min-height: 40px;
+  }
+
+  .logo img {
+    max-width: 90px;
+  }
+
+  .logo svg {
+    height: 24px;
   }
 }
